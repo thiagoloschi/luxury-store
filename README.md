@@ -1,1 +1,1 @@
-# luxuryStore
+# Luxury Store
