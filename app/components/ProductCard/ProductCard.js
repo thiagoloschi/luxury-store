@@ -12,9 +12,10 @@ import {
 
 export const DefaultCardWrapper = styled.div`
   padding: ${Dimens.defaultSpace};
-  background-color: ${({ color }) => color};
+  margin: 4px;
   height: ${Dimens.productCardHeight};
   width: ${Dimens.productCardWidth};
+  background-color: ${({ color }) => color};
 `;
 
 export const AvatarWrapper = styled.div`

@@ -29,10 +29,10 @@ const defaultProps = {
 const render = (props) => shallow(<ProductCard {...props} {...defaultProps} />);
 const { avatar, name, description, price } = defaultProps;
 
-describe('<TopBar />', () => {
+describe('<ProductCard />', () => {
   it('should render Product card with the correct props', () => {
-    const topbar = render();
-    expect(topbar.containsMatchingElement(
+    const productCard = render();
+    expect(productCard.containsMatchingElement(
       <DefaultCardWrapper>
         <AvatarWrapper>
           <Avatar src={avatar} />
@@ -54,9 +54,9 @@ describe('<TopBar />', () => {
   });
 
   describe('when there is a supplied color', () => {
-    const blackTopBar = render({ color: 'black' });
+    const productCard = render({ color: 'black' });
     it('should render a DefaultCardWrapper with the supplied color', () => {
-      expect(blackTopBar.find(DefaultCardWrapper).props().color).toEqual('black');
+      expect(productCard.find(DefaultCardWrapper).props().color).toEqual('black');
     });
   });
 });
