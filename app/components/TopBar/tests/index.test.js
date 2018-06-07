@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Colors from 'assets/colors';
 import FarfecthLogo from 'assets/images/farfetch.svg';
-import { TopBar, DefaulTopBar } from '../TopBar';
+import { TopBar, DefaultTopBar, Logo } from '../TopBar';
 
 const defaultProps = {
   logo: FarfecthLogo,
@@ -11,21 +11,26 @@ const defaultProps = {
 const render = (props) => shallow(<TopBar {...props} {...defaultProps} />);
 
 describe('<TopBar />', () => {
-  it('should render a DefaulTopBar', () => {
+  it('should render a DefaultTopBar with the proper logo', () => {
     const topbar = render();
-    expect(topbar.find(DefaulTopBar).exists()).toBeTruthy();
+    expect(topbar.containsMatchingElement(
+      <DefaultTopBar>
+        <Logo src={defaultProps.logo} />
+      </DefaultTopBar>
+    )).toBeTruthy();
   });
 
   describe('when no color was supplied', () => {
     const defaultColored = render();
     it('should render a white TopBar', () => {
-      expect(defaultColored.find(DefaulTopBar).props().color).toEqual(Colors.white);
+      expect(defaultColored.find(DefaultTopBar).props().color).toEqual(Colors.white);
     });
   });
+
   describe('when there is a supplied color', () => {
     const blackTopBar = render({ color: 'black' });
-    it('should render a the supplied color', () => {
-      expect(blackTopBar.find(DefaulTopBar).props().color).toEqual('black');
+    it('should render a TopBar with the supplied color', () => {
+      expect(blackTopBar.find(DefaultTopBar).props().color).toEqual('black');
     });
   });
 });
