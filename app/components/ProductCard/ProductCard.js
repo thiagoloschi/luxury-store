@@ -25,20 +25,36 @@ export const AvatarWrapper = styled.div`
   height: 80%;
 `;
 
-export const Avatar = styled.img`
-  height: 300px;
+export const Avatar = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  background-image: url(${({ avatarUrl }) => avatarUrl});
+  background-color: #f6f6f6;
+  background-position: 50% 35%;
+  background-size: 155%;
+  background-repeat: no-repeat;
+  will-change: background-image;
+  will-change: background-position;
+  transition: 2s all ease;
+  
+  &:hover {
+    background-image: url(${({ alternateImgUrl }) => alternateImgUrl});
+    background-size: 200%;
+    overflow: auto;
+    transition: 1s all ease;
+  }
 `;
 
 export const ProductCard = ({ product, color }) => {
   const { shortDescription, price, brand, images } = product;
   const { name } = brand;
-  const avatar = images[0].url;
+  const avatar = images[1].url;
+  const alternate = images[2].url;
 
   return (
     <DefaultCardWrapper color={color}>
-      <AvatarWrapper>
-        <Avatar src={avatar} />
-      </AvatarWrapper>
+      <Avatar alternateImgUrl={alternate} avatarUrl={avatar}></Avatar>
       <DescriptionWrapper>
         <ProductName {...messages.name} values={{ name }} />
         <ProductDescription {...messages.description} values={{ shortDescription }} />
