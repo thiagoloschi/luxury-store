@@ -5,16 +5,17 @@ import ProductCard from 'components/ProductCard';
 
 export const ListWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
   width: 90%;
   margin: auto;
+  padding-bottom: 56px;
 `;
 
 export const ProductsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
   @media (max-width: 1040px) {
     justify-content: center;
@@ -22,12 +23,10 @@ export const ProductsWrapper = styled.div`
 `;
 
 export const ProductList = ({ products }) => {
-  const listOfProduct = products.map(({ avatar, name, description, price }) => (
+  const listOfProduct = products.map((product) => (
     <ProductCard
-      avatar={avatar}
-      name={name}
-      description={description}
-      price={price}
+      key={product.id}
+      product={product}
     />
   ));
 
@@ -41,12 +40,7 @@ export const ProductList = ({ products }) => {
 };
 
 ProductList.propTypes = {
-  products: PropTypes.arrayOf({
-    avatar: PropTypes.string,
-    name: PropTypes.object,
-    description: PropTypes.object,
-    price: PropTypes.object,
-  }),
+  products: PropTypes.array,
 };
 
 export default ProductList;

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Dimens from 'assets/dimensions';
 import Colors from 'assets/colors';
+import messages from './messages';
 import {
   DescriptionWrapper,
   ProductName,
@@ -28,24 +29,42 @@ export const Avatar = styled.img`
   height: 300px;
 `;
 
-export const ProductCard = ({ avatar, color, name, description, price }) => (
-  <DefaultCardWrapper color={color}>
-    <AvatarWrapper>
-      <Avatar src={avatar} />
-    </AvatarWrapper>
-    <DescriptionWrapper>
-      <ProductName {...name} />
-      <ProductDescription {...description} />
-      <ProductPrice {...price} />
-    </DescriptionWrapper>
-  </DefaultCardWrapper>
-);
+export const ProductCard = ({ product, color }) => {
+  const { shortDescription, price, brand, images } = product;
+  const { name } = brand;
+  const avatar = images[0].url;
+
+  return (
+    <DefaultCardWrapper color={color}>
+      <AvatarWrapper>
+        <Avatar src={avatar} />
+      </AvatarWrapper>
+      <DescriptionWrapper>
+        <ProductName {...messages.name} values={{ name }} />
+        <ProductDescription {...messages.description} values={{ shortDescription }} />
+        <ProductPrice {...messages.price} values={{ price }} />
+      </DescriptionWrapper>
+    </DefaultCardWrapper>
+  );
+};
 
 ProductCard.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.object.isRequired,
-  description: PropTypes.object.isRequired,
-  price: PropTypes.object.isRequired,
+  product: PropTypes.objectOf({
+    priceWithoutDiscount: PropTypes.number,
+    shortDescription: PropTypes.string,
+    price: PropTypes.number,
+    brand: PropTypes.objectOf({
+      id: PropTypes.number,
+      name: PropTypes.string.isRequired,
+      priceType: PropTypes.number,
+    }),
+    images: PropTypes.arrayOf({
+      size: PropTypes.string,
+      url: PropTypes.string.isRequired,
+    }),
+    id: PropTypes.number,
+    promotionPercentage: PropTypes.number,
+  }),
   color: PropTypes.string,
 };
 
