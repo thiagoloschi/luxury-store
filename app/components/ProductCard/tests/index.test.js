@@ -2,17 +2,17 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Colors from 'assets/colors';
 import {
+  DescriptionWrapper,
+  ProductName,
+  ProductDescription,
+  ProductPrice,
+} from 'components/TextComponents';
+import {
     ProductCard,
     DefaultCardWrapper,
     AvatarWrapper,
     Avatar,
 } from '../ProductCard';
-import {
-  DescriptionWrapper,
-  ProductName,
-  ProductDescription,
-  ProductPrice,
-} from '../ProductInfo';
 
 const mockedMsg = {
   id: 'product id',
