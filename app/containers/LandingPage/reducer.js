@@ -1,7 +1,7 @@
 import { fromJS } from 'immutable';
 import { FETCH_PRODUCTS } from './constants';
 
-const initialState = fromJS({
+export const initialState = fromJS({
   productsInfo: {
     entries: [],
   },
