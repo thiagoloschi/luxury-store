@@ -107,7 +107,7 @@
           }
         ],
         "videos": [],
-        "price": 551.1623,
+        "price": 385.812,
         "formattedPrice": "551,16 €",
         "gender": 0,
         "formattedPriceWithoutDiscount": "551,16 €",
@@ -123,7 +123,7 @@
         "merchantId": 9359,
         "isInWishlist": false,
         "slug": "subtle-pleat-pencil-skirt-12227722",
-        "promotionPercentage": 0,
+        "promotionPercentage": 30,
         "tag": 0,
         "tagDescription": "NoTag"
       },
@@ -191,7 +191,7 @@
           }
         ],
         "videos": [],
-        "price": 1000,
+        "price": 800,
         "formattedPrice": "1 000,00 €",
         "gender": 0,
         "formattedPriceWithoutDiscount": "1 000,00 €",
@@ -207,7 +207,7 @@
         "merchantId": 9359,
         "isInWishlist": false,
         "slug": "bow-embellished-cloque-midi-skirt-12134759",
-        "promotionPercentage": 0,
+        "promotionPercentage": 20,
         "tag": 0,
         "tagDescription": "NoTag"
       },
