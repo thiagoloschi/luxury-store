@@ -17,19 +17,25 @@ Progressive Web App, React, Redux, Webpack, Nodejs, Styled-components, Jest, Enz
 ### Development
 Please refer to the [Pull requests](https://github.com/thiagoloschi/luxury-store/issues?q=is%3Apr+is%3Aclosed) section for a full coding documentation.
 
-### Running
-To see the project live locally just run:
+### Running locally
+To see the project live, first install the dependencies and cache the webpack:
 ```node
 // installing dependencies and caching the webpack
 npm install && npm run build:dll
+```
 
-// to run in develop mode
+Then, to run it in develop mode do:
+```node
 npm run start
+```
 
-// to run in production mode
+You can also run it in production mode with:
+```node
 npm run start:production
+```
 
-// to run the tests just do
+If you want to run tests, enter:
+```node
 npm run test
 ```
 <br />
