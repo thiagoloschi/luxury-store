@@ -20,7 +20,6 @@ Please refer to the [Pull requests](https://github.com/thiagoloschi/luxury-store
 ### Running locally
 To see the project live, first install the dependencies and cache the webpack:
 ```node
-// installing dependencies and caching the webpack
 npm install && npm run build:dll
 ```
 
