@@ -10,6 +10,9 @@ import {
   ProductName,
   ProductDescription,
   ProductPrice,
+  SalesProduct,
+  FullPrice,
+  SalePrice,
 } from './ProductInfo';
 
 export const DefaultCardWrapper = styled.div`
@@ -41,11 +44,11 @@ export const Avatar = styled.div`
 `;
 
 export const ProductCard = ({ product, color }) => {
-  const { shortDescription, price, brand, images } = product;
+  const { shortDescription, price, brand, images, promotionPercentage, priceWithoutDiscount } = product;
   const { name } = brand;
   const avatar = images[2].url;
   const alternate = images[3].url;
-  const priceOptions = { value: price, style: 'currency', currency: 'BRL' };
+  const priceOptions = (value) => ({ value, style: 'currency', currency: 'BRL' });
 
   return (
     <DefaultCardWrapper color={color}>
@@ -57,8 +60,22 @@ export const ProductCard = ({ product, color }) => {
         <ProductDescription>
           <FormattedMessage {...messages.description} values={{ shortDescription }} tagName="p" />
         </ProductDescription>
+        {promotionPercentage ?
+          <SalesProduct>
+            <FullPrice>
+              <FormattedNumber {...priceOptions(priceWithoutDiscount)} />
+            </FullPrice>
+            <FormattedMessage {...messages.discount} values={{ promotionPercentage }} />
+            <SalePrice>
+              <FormattedNumber {...priceOptions(price)} />
+            </SalePrice>
+          </SalesProduct> :
+          <ProductPrice>
+            <FormattedNumber {...priceOptions(price)} tagName="p" />
+          </ProductPrice>}
         <ProductPrice>
-          <FormattedNumber {...priceOptions} tagName="p" />
+          <FormattedMessage {...messages.quota} values={{ quota: 12 }} />
+          <FormattedNumber {...priceOptions(price / 12)} tagName="p" />
         </ProductPrice>
       </DescriptionWrapper>
     </DefaultCardWrapper>

@@ -9,8 +9,12 @@ export default defineMessages({
     id: 'app.components.ProductCard.description',
     defaultMessage: '{shortDescription}',
   },
-  price: {
+  quota: {
     id: 'app.components.ProductCard.price',
-    defaultMessage: '{price}',
+    defaultMessage: '{quota} x  ',
+  },
+  discount: {
+    id: 'app.components.ProductCard.promotionPercentage',
+    defaultMessage: ' |  {promotionPercentage}% off ',
   },
 });
