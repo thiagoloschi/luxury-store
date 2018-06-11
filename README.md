@@ -9,10 +9,12 @@
 
 ### Description
 This is a responsive Progressive web app to be used as a store template. In the example, I've used data from the company Farfetch. Hover on the product to see a different image and know what products are on sale. This is ready to be added to your home screen with a few steps. I might do it in the future.
+
 <br /> 
 
 ### Technologies
 Progressive Web App, React, Redux, Webpack, Nodejs, Styled-components, Jest, Enzyme.
+
 <br />
 
 ### Development
@@ -40,10 +42,13 @@ If you want to run tests, enter:
 ```node
 npm run test
 ```
+
 <br />
 
 ### Live Demo
 You can see a [live demo](https://luxury-store.herokuapp.com/) of the application at Heroku: https://luxury-store.herokuapp.com/
+
+<br />
 
 ### Screenshots
 <br />
