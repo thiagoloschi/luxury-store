@@ -37,25 +37,28 @@ npm run test
 ### Screenshots
 <br />
 
+**Screencast**
 
 <img width="1679" alt="screen shot 2018-06-10 at 11 54 53 pm" src="https://user-images.githubusercontent.com/10034981/41211475-fcf6a412-6d0d-11e8-923a-4a8c22f11fa2.gif">
 
-**Screencast**
-
 <br />
-<img width="1679" alt="screen shot 2018-06-10 at 11 54 53 pm" src="https://user-images.githubusercontent.com/10034981/41210764-f84820f2-6d09-11e8-8340-74e44ed1e5a5.png">
 
 **Desktop**
 
+<img width="1679" alt="screen shot 2018-06-10 at 11 54 53 pm" src="https://user-images.githubusercontent.com/10034981/41210764-f84820f2-6d09-11e8-8340-74e44ed1e5a5.png">
+
 <br/>
-<img width="373" alt="screen shot 2018-06-11 at 12 28 19 am" src="https://user-images.githubusercontent.com/10034981/41211582-afe69fdc-6d0e-11e8-8854-7fb8a06047e0.png">
-<img width="377" alt="screen shot 2018-06-11 at 12 28 31 am" src="https://user-images.githubusercontent.com/10034981/41211583-b0040766-6d0e-11e8-8cc3-6d71d4626bc8.png">
 
 **Mobile**
 
+<img width="373" alt="screen shot 2018-06-11 at 12 28 19 am" src="https://user-images.githubusercontent.com/10034981/41211582-afe69fdc-6d0e-11e8-8854-7fb8a06047e0.png">
+<img width="377" alt="screen shot 2018-06-11 at 12 28 31 am" src="https://user-images.githubusercontent.com/10034981/41211583-b0040766-6d0e-11e8-8cc3-6d71d4626bc8.png">
+
+
 <br/>
-<img width="402" alt="screen shot 2018-06-11 at 12 29 24 am" src="https://user-images.githubusercontent.com/10034981/41211587-b9928168-6d0e-11e8-92bf-a92079f737ac.png">
 
 **Tablet**
+
+<img width="402" alt="screen shot 2018-06-11 at 12 29 24 am" src="https://user-images.githubusercontent.com/10034981/41211587-b9928168-6d0e-11e8-92bf-a92079f737ac.png">
 
 <br/><br/><br/>
