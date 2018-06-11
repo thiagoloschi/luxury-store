@@ -12,6 +12,7 @@ import ProductList from 'components/ProductList';
 import reducer from './reducer';
 import { makeSelectProducts } from './selectors';
 import { doProductsFetching } from './actions';
+import PageInfo from './PageInfo';
 
 export class LandingPage extends React.PureComponent {
   componentDidMount() {
@@ -23,6 +24,7 @@ export class LandingPage extends React.PureComponent {
     return (
       <div>
         <TopBar logo={FarfetchLogo} />
+        <PageInfo />
         <ProductList products={products} />
       </div>
     );

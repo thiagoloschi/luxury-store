@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { FormattedMessage, FormattedNumber } from 'react-intl';
 import Dimens from 'assets/dimensions';
 import Colors from 'assets/colors';
-import messages from './messages';
 import {
   DescriptionWrapper,
   ProductName,
@@ -13,7 +12,8 @@ import {
   SalesProduct,
   FullPrice,
   SalePrice,
-} from './ProductInfo';
+} from 'components/TextComponents';
+import messages from './messages';
 
 export const DefaultCardWrapper = styled.div`
   padding: ${Dimens.defaultSpace};
