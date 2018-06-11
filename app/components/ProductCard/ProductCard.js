@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedNumber } from 'react-intl';
 import Dimens from 'assets/dimensions';
 import Colors from 'assets/colors';
 import messages from './messages';
@@ -17,6 +17,7 @@ export const DefaultCardWrapper = styled.div`
   margin: 4px;
   height: ${Dimens.productCardHeight};
   width: ${Dimens.productCardWidth};
+  cursor: pointer;
   background-color: ${({ color }) => color};
 `;
 
@@ -29,14 +30,12 @@ export const Avatar = styled.div`
   background-position: 50% 35%;
   background-size: 155%;
   background-repeat: no-repeat;
-  will-change: background-image;
-  will-change: background-size;
+  will-change: background-image, background-size;
   transition: 1s all ease;
   
   &:hover {
     background-image: url(${({ alternateImgUrl }) => alternateImgUrl});
     background-size: 200%;
-    overflow: auto;
     transition: 1s all ease;
   }
 `;
@@ -46,6 +45,7 @@ export const ProductCard = ({ product, color }) => {
   const { name } = brand;
   const avatar = images[2].url;
   const alternate = images[3].url;
+  const priceOptions = { value: price, style: 'currency', currency: 'BRL' };
 
   return (
     <DefaultCardWrapper color={color}>
@@ -58,7 +58,7 @@ export const ProductCard = ({ product, color }) => {
           <FormattedMessage {...messages.description} values={{ shortDescription }} tagName="p" />
         </ProductDescription>
         <ProductPrice>
-          <FormattedMessage {...messages.price} values={{ price }} tagName="p" />
+          <FormattedNumber {...priceOptions} tagName="p" />
         </ProductPrice>
       </DescriptionWrapper>
     </DefaultCardWrapper>
