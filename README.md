@@ -52,7 +52,7 @@ npm run test
 **Mobile**
 
 <img width="373" alt="screen shot 2018-06-11 at 12 28 19 am" src="https://user-images.githubusercontent.com/10034981/41211582-afe69fdc-6d0e-11e8-8854-7fb8a06047e0.png">
-<img width="377" alt="screen shot 2018-06-11 at 12 28 31 am" src="https://user-images.githubusercontent.com/10034981/41211583-b0040766-6d0e-11e8-8cc3-6d71d4626bc8.png">
+<img width="320" alt="screen shot 2018-06-10 at 10 21 37 pm" src="https://user-images.githubusercontent.com/10034981/41208742-bfb188b2-6cfc-11e8-96f3-8dce116b9595.png">
 
 
 <br/>
