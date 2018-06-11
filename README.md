@@ -3,8 +3,9 @@
 1. [Description](#description)
 2. [Technologies](#technologies)
 3. [Development](#development)
-4. [Running](#running-locally)
-5. [Screenshots](#screenshots)
+4. [Running Locally](#running-locally)
+5. [Live Demo](#live-demo)
+6. [Screenshots](#screenshots)
 
 ### Description
 This is a responsive Progressive web app to be used as a store template. In the example, I've used data from the company Farfetch. Hover on the product to see a different image and know what products are on sale. This is ready to be added to your home screen with a few steps. I might do it in the future.
@@ -17,8 +18,10 @@ Progressive Web App, React, Redux, Webpack, Nodejs, Styled-components, Jest, Enz
 ### Development
 Please refer to the [Pull requests](https://github.com/thiagoloschi/luxury-store/issues?q=is%3Apr+is%3Aclosed) section for a full coding documentation.
 
+<br />
+
 ### Running locally
-To see the project live, first install the dependencies and cache the webpack:
+To run the project locally, first install the dependencies and then make sure to cache the webpack:
 ```node
 npm install && npm run build:dll
 ```
@@ -38,6 +41,9 @@ If you want to run tests, enter:
 npm run test
 ```
 <br />
+
+### Live Demo
+You can see a [live demo](https://luxury-store.herokuapp.com/) of the application at Heroku: https://luxury-store.herokuapp.com/
 
 ### Screenshots
 <br />
