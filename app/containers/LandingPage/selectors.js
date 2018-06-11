@@ -13,6 +13,7 @@ const makeSelectProducts = () => createSelector(
 );
 
 export {
+  selectProduct,
   makeSelectProductInfo,
   makeSelectProducts,
 };

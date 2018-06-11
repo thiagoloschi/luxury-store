@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { mockedProduct } from 'utils/mockedProduct';
 import ProductCard from 'components/ProductCard';
 import {
     ProductList,
@@ -7,16 +8,6 @@ import {
     ListWrapper,
 } from '../ProductList';
 
-const mockedMsg = {
-  id: 'product id',
-  defaultMessage: 'this is a very nice product',
-};
-const mockedProduct = {
-  avatar: 'some img url goes here',
-  name: mockedMsg,
-  description: mockedMsg,
-  price: mockedMsg,
-};
 const mockedListOfProducts = [mockedProduct, mockedProduct];
 const defaultProps = {
   products: mockedListOfProducts,
@@ -25,13 +16,13 @@ const defaultProps = {
 const render = (props) => shallow(<ProductList {...props} {...defaultProps} />);
 
 describe('<ProductList />', () => {
-  it('should render a Product card with the correct props', () => {
+  it('should render a Product list with the correct props', () => {
     const productList = render();
     expect(productList.containsMatchingElement(
       <ListWrapper>
         <ProductsWrapper>
-          <ProductCard {...mockedProduct} />
-          <ProductCard {...mockedProduct} />
+          <ProductCard product={mockedProduct} />
+          <ProductCard product={mockedProduct} />
         </ProductsWrapper>
       </ListWrapper>
     )).toBeTruthy();
