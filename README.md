@@ -3,7 +3,7 @@
 1. [Description](#description)
 2. [Technologies](#technologies)
 3. [Development](#development)
-4. [Running](#running)
+4. [Running](#running-locally)
 5. [Screenshots](#screenshots)
 
 ### Description
