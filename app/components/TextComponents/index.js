@@ -7,6 +7,19 @@ export const DescriptionWrapper = styled.div`
   text-align: center;
 `;
 
+export const Breadcrumb = styled.div`
+  font-size: 12px;
+  cursor: pointer;
+  color: #aaa;
+  font-weight: 100;
+  font-family: Polaris-Book,sans-serif;
+  > p {
+    margin: 0;
+    font-family: inherit;
+  }
+`;
+
+
 export const ProductText = styled.div`
   font-family: Polaris-Condensed-Bold,Polaris-Bold,sans-serif;
   width: 100%;
@@ -14,6 +27,19 @@ export const ProductText = styled.div`
     margin: 0;
     font-family: inherit;
   }
+`;
+
+export const PageTitle = ProductText.extend`
+  font-size: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+`;
+
+export const PageDescription = ProductText.extend`
+  font-size: 13px;
+  font-weight: 100;
+  font-family: Polaris-Book,sans-serif;
 `;
 
 export const ProductName = ProductText.extend`
